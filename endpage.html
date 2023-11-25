@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="icon" href="./assets/blackjacklogo.png">
+    <link rel="stylesheet" href="endpage.css">
+</head>
+<body>
+    <h1 id="endmessage"></h1>
+    <div id="text-values">
+      <p>Dealer's Card Value: <span id="dealersum"></span></p>
+      <p>Your Card Value: <span id="yoursum"></span> </p>
+    </div>
+    <div id="buttons">
+      <a href="blackjack.html"><button id="reset">Play Again</button></a>
+      <a href="index.html"><button id="home">Home</button></a>
+    </div>
+</body>
+<script>
+
+const message = localStorage.getItem("message");
+document.getElementById("endmessage").textContent = message;
+
+const dealersum = localStorage.getItem("dealersum");
+document.getElementById("dealersum").textContent = dealersum;
+
+const yoursum = localStorage.getItem("yoursum");
+document.getElementById("yoursum").textContent = yoursum;
+
+</script>
+</html>

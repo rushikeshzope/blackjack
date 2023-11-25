@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="terms.css">
+    <link rel="icon" href="./assets/blackjacklogo.png">
+  </head>
+   <body>
+       <img src="./assets/blackjacklogo.png" alt="blackjacklogo" id="blackjacklogo">
+        <a href="index.html"><img src="./assets/backarrow.png" alt="backarrow" id="backarrow"></a>
+        <div>
+            <h3>Terms and Conditions for Playing Blackjack:</h3>
+            <p>
+                <ul>
+
+                    <li>Players must be of legal gambling age in their jurisdiction to participate.</li>
+
+                    <li>Any attempts to falsify age or identity information will result in immediate banning of the account.</li>
+
+                    <li>Game will follow standard Blackjack rules unless otherwise specified.</li>
+
+                    <li>Players are responsible for understanding and adhering to the rules of the game.</li>
+
+                    <li>Cheating or any form of unfair play is strictly prohibited.</li>
+
+                    <li>Players found violating fair play rules will be disqualified, and their account may be suspended.</li> 
+
+                    <li>Termination may result in the forfeiture of winnings and/or legal action.</li> 
+
+                </ul>
+                <input type="checkbox" name="termsCheckbox" id="termsCheckbox"> 
+                <label for="termsCheckbox">I understand and accept all the terms and conditions for playing this game.</label>
+            </p>
+        </div>
+        <form action="blackjack.html" onsubmit="return validateForm()">
+          <button id="proceedbutton">Proceed</button>
+        </form>
+        <script>
+            function validateForm() {
+                var checkbox = document.getElementById("termsCheckbox");
+    
+                if (!checkbox.checked) {
+                    alert("Please accept the terms and conditions.");
+                    return false; // Prevent form submission
+                }
+    
+                // Continue with form submission if the checkbox is checked
+                return true;
+            }
+        </script>
+    </body>
+</html>
+

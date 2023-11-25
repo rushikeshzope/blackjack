@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto:wght@300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-image: url('https://img.freepik.com/premium-vector/poker-table-background-green-color_47243-1068.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#blackjacklogo{
+    height: 25vh;
+    position: absolute;
+    right: 60px;
+    top: 10px;
+}
+
+#timer-image{
+    height: 20vh;
+    position: absolute;
+    left: 120px;
+    top: 30px;
+}
+
+#timer {
+    font-size: 2.5em;
+    color: white;
+    position: absolute;
+    left: 135px;
+    top: 178px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: timerBlink 0.5s infinite alternate;
+}
+
+#backarrow{
+    height: 10vh;
+    position: absolute;
+    left: 30px;
+    top:10%;
+    cursor: pointer;
+    transition: scale 5s ease;
+}
+
+#backarrow:hover{
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    animation: colorChange 2s infinite alternate;
+}
+
+#dealer-cards, #your-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#dealer-cards img, #your-cards img {
+    height: 200px;
+    width: 150px;
+    margin: 1px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#dealer-cards img:hover, #your-cards img:hover {
+    transform: scale(1.1); 
+}
+
+#hit, #stay, #shuffledeck{
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#hit:hover, #stay:hover, #shuffledeck:hover{
+    background-color: #126a18;
+}
+
+#dealer-cards img, #your-cards img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#hidden {
+    opacity: 0.7;
+    filter: grayscale(100%);
+}
+
+@keyframes timerBlink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #ffffff; 
+    }
+    25% {
+        color: #1eff00; 
+    }
+    50% {
+        color: #2b852b; 
+    }
+    75% {
+        color: #00cc4b; 
+    }
+    100% {
+        color: #00ff8c; 
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    
+
+    body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        background-image: url('https://t4.ftcdn.net/jpg/00/93/36/49/360_F_93364974_eoos8QGsa9CzTa5hGRRL6EutXMSKgdOA.jpg');
+        background-repeat: no-repeat;
+        background-size: 300%;
+        margin: 0px;
+        padding: 0px;
+        font-size: 1em;
+        color: white;
+    } 
+
+    #blackjacklogo{
+        height: 15vh;
+        position: relative;
+        left: 0%;
+    }
+
+    #backarrow{
+        display: none;
+    }
+
+    #timer-image{
+        height: 10vh;
+        position: absolute;
+        left: 10px;
+        top: 20px;
+    }
+
+    #timer {
+        font-size: 1.5em;
+        color: white;
+        position: absolute;
+        left: 10px;
+        top: 100px;
+        font-family: 'Arial', sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        animation: timerBlink 0.5s infinite alternate;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        color: #fff;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        animation: colorChange 2s infinite alternate;
+    }
+
+    #dealer-cards img, #your-cards img {
+        height: 140px;
+        width: 90px;
+        margin: 1px;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #hit, #stay, #shuffledeck{
+        width: 120px;
+        height: 50px;
+        font-size: 18px;
+        margin: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+}

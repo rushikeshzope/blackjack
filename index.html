@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="icon" href="./assets/blackjacklogo.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <audio src="./assets/bgm.mp3" autoplay loop></audio>
+  <a href="howtoplay.html"><button id="howtoplaybutton">How to play?</button></a>
+  <div> 
+    <p id="note">Note: You have to be 21+ to play this game</p>
+    <img src="./assets/blackjacklogo.png" alt="blackjacklogo" id="blackjacklogo">
+     
+    <form action="terms.html" id="startpageform">
+    
+      <br>
+      
+      <div class="container">
+        <div class="entryarea">
+          <input type="text" class="formcontent" name="playername" id="playername" pattern="[A-Za-z]+" title="Please enter letters only" required>
+          <div class="labelline1" id="name">Enter Your Name</div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="entryarea">
+          <input type="text" class="formcontent" name="playernickname" id="playernickname" required>
+          <div class="labelline" id="nickname">Enter Your Nickname</div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div id="birthdatediv">
+      <label for="playerbirthdate">Enter Your Birthdate: </label>
+      <input type="date" name="playerbirthdate" id="playerbirthdate" max="2002-11-22"  required>
+      </div>
+
+      <br>
+      <br>
+
+      <button id="startgamebutton">Start Game</button>
+
+    </form>
+  </div>
+</body>
+<script>
+
+  // const backgroundSound = new Audio("bgm.mp3");
+  // backgroundSound.play();
+  // backgroundSound.loop = true;
+
+  document.getElementById("startgamebutton").addEventListener("click", function() {
+      
+  const nickname = document.getElementById("playernickname").value;
+
+  localStorage.setItem("playerNickname", nickname);
+  });
+</script>
+</html>

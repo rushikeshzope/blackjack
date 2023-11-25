@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blackjack</title>
+        <link rel="stylesheet" href="blackjack.css">
+        <link rel="icon" href="./assets/blackjacklogo.png">
+        <script src="blackjack.js"></script>
+    </head>
+
+    <body>
+
+        <a href="terms.html"><img src="./assets/backarrow.png" alt="backarrow" id="backarrow"></a>
+        <img src="./assets/blackjacklogo.png" alt="blackjacklogo" id="blackjacklogo">
+        <img src="./assets/stopwatch.png" alt="timer-image" id="timer-image">
+
+        <!-- <h1 id="timer"></h1> -->
+
+        <div id="timer">
+          <span id="minutes">00</span> <span>:</span> <span id="seconds"></span>
+        </div>
+
+        <h2>Dealer: <span id="dealer-sum"></span></h2>
+        <div id="dealer-cards">
+            <img id="hidden" src="./cards/BACK.png">
+        </div>
+
+        <h2>You: <span id="your-sum"></span></h2>
+        <div id="your-cards"></div>
+
+
+        <br>
+        <button id="hit">Hit</button>
+        <button id="stay">Stay</button>
+        <a href="blackjack.html"><button id="shuffledeck">Shuffledeck</button></a>
+    </body>
+
+    <script>
+        const backgroundSound = new Audio("./assets/bgm.mp3");
+        backgroundSound.play();
+        backgroundSound.loop = true;
+        backgroundSound.volume = 0.5;
+
+        const playerNickname = localStorage.getItem("playerNickname");
+        
+        if (playerNickname) {
+            document.getElementById("your-sum").textContent = playerNickname;
+        }
+    </script>
+
+</html>
