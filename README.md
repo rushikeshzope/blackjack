@@ -30,7 +30,7 @@ References used to build this game:
 
 Background Images: https://www.freepik.com/
 
-Icon Images: flaticons.com
+Icon Images: https://www.flaticon.com/
 
 Sound Files: https://pixabay.com/music/
 
