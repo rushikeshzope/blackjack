@@ -18,13 +18,13 @@ Screen 4: Screen 4 is the screen where you can play the game joyfully.
 
 Screen 5: In screen 5, You get the result of your played game. You have an option to play the game again or return Home on this screen.
 
-Deployed Link: 
-
-https://stellar-heliotrope-40631e.netlify.app
-
 Screenshots of the game:
 
 https://drive.google.com/drive/u/1/folders/1XxeArT3Kvo670IuJ5RQ2NUDIYGreL2ME
+
+Deployed Link: 
+
+https://stellar-heliotrope-40631e.netlify.app
 
 References used to build this game:
 
